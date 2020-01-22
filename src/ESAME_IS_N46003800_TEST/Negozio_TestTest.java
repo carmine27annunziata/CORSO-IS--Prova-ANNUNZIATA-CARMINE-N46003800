@@ -31,7 +31,6 @@ public class Negozio_TestTest {
 
 	@Before
 	public void setUp() throws Exception {
-		GestioneSpese gestione = new GestioneSpese();
 	}
 
 	@After
@@ -41,7 +40,7 @@ public class Negozio_TestTest {
 
 	@Test
 	public void test1() {
-		System.out.print("TEST 1 \n");
+		System.out.print("****************TEST 1**************** \n");
 		
 		ArrayList<Utente> utentiReport = gestione.generaReport(-1);
 		assertTrue(utentiReport.isEmpty());
@@ -49,7 +48,7 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test2() {
-		System.out.print("TEST 2 \n");
+		System.out.print("****************TEST 2****************\n");
 		
 		
 		ArrayList<Utente> utentiReport = gestione.generaReport(2);
@@ -59,7 +58,7 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test3() {
-		System.out.print("TEST 3 \n");
+		System.out.print("****************TEST 3****************\n");
 		gestione.utentiRegistrati.add(new Utente("Carmine", "Carmine123", "1234567890", "0000000000000000"));
 		ArrayList<Utente> utentiReport = gestione.generaReport(0);
 		assertTrue(utentiReport.size() == 1);
@@ -67,8 +66,8 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test4() {
-		System.out.print("TEST 4 \n");
-		gestione.utentiRegistrati.add(new Utente("Carmine", "Carmine123", "1234567890", "0000000000000000"));
+		System.out.print("****************TEST 4**************** \n");
+		gestione.utentiRegistrati.add(new Utente("Pasquale", "paquito", "222222222", "123321123321"));
 		ArrayList<Utente> utentiReport = gestione.generaReport(1);
 		assertTrue(utentiReport.size() == 0);
 		
@@ -76,7 +75,7 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test5() {
-		System.out.print("TEST 5 \n");
+		System.out.print("****************TEST 5**************** \n");
 		gestione.prodottiInseriti.add(new Prodotto("Dixan", 2.5, 100));
 		gestione.utentiRegistrati.add(new Utente("Carmine", "Carmine123", "1234567890", "0000000000000000"));
 		gestione.creaCarrello();
@@ -89,7 +88,7 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test6() {
-		System.out.print("TEST 6 \n");
+		System.out.print("****************TEST 6**************** \n");
 		gestione.prodottiInseriti.add(new Prodotto("Dixan", 2.5, 100));
 		gestione.utentiRegistrati.add(new Utente("Carmine", "Carmine123", "1234567890", "0000000000000000"));
 		ProdottoOrdinato prodotto1 = new ProdottoOrdinato(gestione.prodottiInseriti.get(0), 5);
@@ -105,10 +104,10 @@ public class Negozio_TestTest {
 	
 	@Test
 	public void test7() {
-		System.out.print("TEST 7 \n");
+		System.out.print("****************TEST 7**************** \n");
 		
-		gestione.prodottiInseriti.add(new Prodotto("Dixan", 2.5, 100));
-		gestione.utentiRegistrati.add(new Utente("Carmine", "Carmine123", "1234567890", "0000000000000000"));
+		gestione.prodottiInseriti.add(new Prodotto("Dixan", 3, 80));
+		gestione.utentiRegistrati.add(new Utente("Roberta", "robbs", "3467543221", "0102030400556660"));
 		ProdottoOrdinato prodotto1 = new ProdottoOrdinato(gestione.prodottiInseriti.get(0), 5);
 		gestione.creaCarrello();
 		gestione.aggiungiProdottoCarrello(prodotto1, 3);

@@ -45,8 +45,7 @@ public class GestioneSpese {
 	}
 	
 	public ArrayList<Utente> generaReport(int n_report) {
-		int count = 0;
-	    ArrayList<Utente> utentiReport = new ArrayList<Utente>();
+		ArrayList<Utente> utentiReport = new ArrayList<Utente>();
 		for(Utente utenti: utentiRegistrati) {
 			if (utenti.getSpeseEffettive() >= n_report) {
 				System.out.print(utenti.toString());
@@ -68,6 +67,10 @@ public class GestioneSpese {
 	}
 	
 	public void rimuoviProdotto() {
+		//TODO
+	}
+	
+	public void notificaFattorino() {
 		//TODO
 	}
 	
